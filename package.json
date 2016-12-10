@@ -1,0 +1,14 @@
+{
+  "name": "root-loader",
+  "version": "0.1.0",
+  "description": "expands require statements in the form '/some/dep' to '/path/to/root/project/some/dep'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "phil olson",
+  "license": "ISC",
+  "dependencies": {
+    "loader-utils": "^0.2.16"
+  }
+}
