@@ -12,10 +12,12 @@ const loaderUtils = require('loader-utils');
 // Main //
 //------//
 
-function rootLoader(src) {
+function rootLoader(src, srcMap) {
   const { rootPath } = loaderUtils.parseQuery(this.query);
 
-  return src.replace(/\brequire\(('|")\//g, 'require($1' + rootPath + '/');
+  src = src.replace(/\brequire\(('|")\//g, 'require($1' + rootPath + '/');
+
+  this.callback(null, src, srcMap);
 }
 
 
